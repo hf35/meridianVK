@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Тесты XHR2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        try {
+    
+
+            var xhrObject = window.XDomainRequest || XMLHttpRequest;
+            var xhr = new xhrObject();
+            var s = "http://pipes.yahoo.com/pipes/pipe.run?_id=fbac867f94d62725af8942dc32e31eb0&_render=jsonp&prefix=Deform&type=artist"
+            var url = 'http:'+'//pipes.yahoo.com/pipes/pipe.run?_id=bffe0119b6f1d70c57c4edd0679121e1&_render=json&api_key=b25b959554ed76058ac220b7b2e0a026&artistmbid=&artistname=%D0%90%D1%80%D0%B8%D1%8F'
+            xhr.open('GET', url, true);
+            xhr.onload = function () {
+                alert(JSON.parse(this.responseText).value);
+            };
+            xhr.send();
+        } catch (e) {
+            alert('pizda '+ e)
+        }
+
+
+    </script>
+</body>
+</html>

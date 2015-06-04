@@ -1,0 +1,280 @@
+﻿@media screen and (max-width: 1400px)
+{
+    html
+    {
+        overflow: auto;
+    }
+
+    body
+    {
+        margin: auto !important;
+        position: relative !important;
+        height: 635px !important;
+        font-family: "Open Sans", Tahoma, 'Trebuchet MS', Verdana, sans-serif !important;
+        /*font-weight: 400 !important;*/
+        -moz-box-shadow: 0px 0px 20px #888;
+        -o-box-shadow: 0px 0px 20px #888;
+        -webkit-box-shadow: 0px 0px 20px #888;
+        box-shadow: 0px 0px 20px #888;
+    }
+
+    #subHeader
+    {
+        position: absolute;
+        width: 827px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    #libriary
+    {
+        height: 450px;
+    }
+    #startup
+    {
+        height: 450px;
+    }
+        #startup .strGroup div
+        {
+            height: 120px !important;
+            margin-bottom:0px !important;
+        }
+    #settingsScreen
+    {
+        height:500px;
+    }
+    #addBio
+    {
+        height:500px;
+    }
+    #info
+    {
+        height:100%;
+    }
+    #listSearch
+    {
+        top: -2px !important;
+    }
+
+    #header #find
+    {
+        top: -2px !important;
+    }
+
+        #header #find.aspanAk
+        {
+            top: -2px !important;
+        }
+
+    #listSearch #value
+    {
+        padding: 3px 5px 3px 5px !important;
+    }
+}
+
+@media screen and (min-width: 1410px)
+{
+    body
+    {
+        margin: auto !important;
+        position: relative !important;
+        height: 755px !important;
+        font-family: "Open Sans", Tahoma, 'Trebuchet MS', Verdana, sans-serif !important;
+        font-weight: 400 !important;
+        -moz-box-shadow: 0px 0px 20px #888;
+        -o-box-shadow: 0px 0px 20px #888;
+        -webkit-box-shadow: 0px 0px 20px #888;
+        box-shadow: 0px 0px 20px #888;
+        width: 1400px !important;
+        overflow: hidden;
+    }
+
+    #subHeader
+    {
+        position: absolute;
+        width: 1400px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    #listSearch
+    {
+        top: -2px !important;
+    }
+
+    #header #find
+    {
+        top: -2px !important;
+    }
+
+        #header #find.aspanAk
+        {
+            top: -2px !important;
+        }
+
+    #listSearch #value
+    {
+        padding: 3px 5px 3px 5px !important;
+    }
+
+    #menu
+    {
+        margin-top: 0px !important;
+        padding-left: 150px !important;
+    }
+
+    #title
+    {
+        width: 1400px !important;
+    }
+
+    #libriary
+    {
+        margin-top: 0px !important;
+        height: 600px !important;
+    }
+
+    #list
+    {
+        width: 260px !important;
+    }
+
+        #list .radio
+        {
+            width: 100%;
+        }
+
+        #list .currentRadio
+        {
+            width: 100%;
+        }
+
+    #playlist
+    {
+        width: 842px !important;
+        left: 260px !important;
+    }
+
+    #info
+    {
+        width: 278px !important;
+        left: 1102px !important;
+        height: 580px;
+    }
+
+    #leftBar
+    {
+        width: 1100px !important;
+    }
+
+        #leftBar #dataTrack
+        {
+            width: 1100px !important;
+        }
+
+    #buttons
+    {
+        left: 1200px !important;
+    }
+
+#leftBar #dataTrack #prog
+{
+    width: 1100px;
+}
+
+#addBio h3
+{
+    width: 1360px;
+}
+
+#startup
+{
+    width: 1400px;
+    height: 620px;
+    top: 50px;
+}
+
+    #startup .strGroup
+    {
+        width: 1400px;
+    }
+
+        #startup .strGroup div
+        {
+            height: 135px;
+            width: 250px;
+            margin: 25px 45px 25px 45px;
+        }
+
+            #startup .strGroup div img
+            {
+                left: 0px;
+            }
+
+#menuTracks
+{
+    left: 1060px;
+}
+
+#editTrack
+{
+    left: 500px;
+}
+
+#quote
+{
+    bottom: 0px;
+    width: 950px;
+}
+
+#settingsScreen
+{
+    left: 0px;
+    height: 620px;
+}
+
+#newPlaylistDialog
+{
+    left: 550px;
+}
+
+#textBack
+{
+    left: 475px;
+}
+
+#closeTextBack
+{
+    right: 470px;
+}
+
+#frendsList
+{
+    left: 365px;
+}
+
+#playlists
+{
+    left: 613px;
+}
+
+.popup
+{
+    left: 563px;
+}
+
+#preload
+{
+    width: 1400px;
+}
+
+#addBio
+{
+    height: 620px;
+}
+
+#genres
+{
+    left: 588px;
+}
+}

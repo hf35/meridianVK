@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Demo Uppod.AJAX</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script language="JavaScript" src="js/uppod_player.js"></script>
+		<script language="JavaScript" src="js/swfobject.js"></script>
+		<style type="text/css">
+			body {margin:0;padding:20px 0 0 30%;color:#333;font:80% Verdana, sans-serif;line-height:150%; }
+			a {color:#00a6da;border:0}
+			a:hover {color:#333}
+			img {border:0}
+			.preloader{}/*{background:url("i/ajax1.gif") no-repeat 50% 50%}*/
+			.player{position:absolute;top:0;left:0;}
+			.api{float:left;margin:0 0 0 10px}
+			#myplayer{float:left}
+			.api li{list-style-type:none;}
+			.ajax,.api li{cursor:hand;cursor: pointer;color:#00a6da;border-bottom:1px dotted #00a6da}
+		</style>
+	</head>
+	<body>
+		    <!--Тестировать следует на сервере (локально пример не работает).-->
+		    
+			<h1><a href="http://uppod.ru/player/ajax">Uppod.AJAX</a> 1.1  (demo)</h1>
+			
+			Пример отключения одного плеера при запуске другого
+			
+			<!--1 SWFObject preloader-->
+			<div id="audioplayer1Preloader" class="preloader" style="width:400px;height:35px"></div>
+			<div id="audioplayer1Box" class="player"><div id="audioplayer1"></div></div>
+			<script type="text/javascript">var flashvars = {"uid":"audioplayer1","m":"audio","file":"http://audio.uppod.net/sample.mp3"};var params = {id:"audioplayer1",allowScriptAccess:"always"}; new swfobject.embedSWF("uppod.swf", "audioplayer1", "400", "35", "9.0.115", false, flashvars, params);</script>
+			
+			<!--2 HTML-->
+			
+			<object id="audioplayer2" type="application/x-shockwave-flash" data="uppod.swf" width="400" height="35"><param name="bgcolor" value="#ffffff" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="movie" value="uppod.swf" /><param name="flashvars" value="uid=audioplayer2&amp;m=audio&amp;file=http://audio.uppod.net/sample.mp3" /></object>
+			
+			<h2>API (<span onClick="ChangePlayer('video')" class="ajax">video</span>, <span onClick="ChangePlayer('audio')" class="ajax">audio</span>, <span onClick="ChangePlayer('photo')" class="ajax">photo</span>)</h2>
+			
+			<!--3 SWFObject -->
+			
+			<div id="myplayerPreloader" class="preloader">Загрузка плеера...</div> 
+			<div id="myplayerBox"><div id="myplayer"></div></div> 
+			<script type="text/javascript">var flashvars = {"uid":"myplayer","m":"video","file":"http://video.uppod.net/sample.flv"};var params = {id:"myplayer",allowFullScreen:"true",allowScriptAccess:"always"}; new swfobject.embedSWF("uppod.swf", "myplayer", "400", "300", "9.0.115", false, flashvars, params);</script>
+			<div class=api>
+				<!-- команды -->
+				<li onClick="uppodSend('myplayer','play');" title="Пуск">play</li>
+				<li onClick="uppodSend('myplayer','pause');" title="Пауза">pause</li>
+				<li onClick="uppodSend('myplayer','toggle');" title="Пуск / Пауза">toggle</li>
+				<li onClick="uppodSend('myplayer','stop');" title="Стоп">stop</li>
+				<li onClick="uppodSend('myplayer','v50');" title="Громкость=50">v50</li>
+				<li onClick="uppodSend('myplayer','seek:10');" title="Перемотка">seek:</li>
+				<li onClick="uppodSend('myplayer','file:http://video.uppod.net/sample.flv');" title="Запуск файла">file:</li>
+				<li onClick="uppodSend('myplayer','pl:{file:http://video.uppod.net/sample.flv,comment:new}');" title="Добавление файла в плейлист">pl:</li>
+				<li onClick="uppodSend('myplayer','start2');" title="Запуск позиции плейлиста">start2</li>
+				<li onClick="uppodSend('myplayer','start_1');" title="Запуск позиции плейлиста с обратной стороны">start_1</li>
+				<li onClick="uppodSend('myplayer','comment:Название');" title="Название">comment:</li>
+				<li onClick="uppodSend('myplayer','text:Текст с возможностью закрыть сообщение');" title="Сообщение">text:</li>
+				<li onClick="uppodSend('myplayer','text2:Текст без возможности закрыть сообщение');" title="Сообщение2">text2:</li>
+				<li onClick="uppodSend('myplayer','xtext');" title="Закрыть сообщение">xtext</li>
+				<li onClick="uppodSend('myplayer','xpl');" title="Закрыть плейлист внутри">xpl</li>
+				<li onClick="uppodSend('myplayer','sss');" title="Скриншот экрана">screenshot</li>
+				
+				
+			</div>	
+				<!-- статусы -->
+			<div class=api>
+				<li onClick="alert(uppodGet('myplayer','getstatus'));" title="Статус воспроизведения">getstatus</li>
+				<li onClick="alert(uppodGet('myplayer','getfull'));" title="Статус полноэкранного режима">getfull <span id='alert'></span></li>
+				<li onClick="alert(uppodGet('myplayer','getpl'));" title="Номер позиции плейлиста">getpl</li>
+				<li onClick="alert(uppodGet('myplayer','getv'));" title="Громкость">getv</li>
+				<li onClick="alert(uppodGet('myplayer','getime'));" title="Время">getime</li>
+				<li onClick="alert(uppodGet('myplayer','getimed'));" title="Продолжительность">getimed</li>
+				<li onClick="alert(uppodGet('myplayer','getbytestotal'));" title="Вес">getbytestotal</li>
+				<li onClick="alert(uppodGet('myplayer','getbytesloaded'));" title="Загружено">getbytesloaded</li>
+				<li onClick="alert(uppodGet('myplayer','getprocent'));" title="Процент загрузки">getprocent</li>
+				<li onClick="alert(uppodGet('myplayer','getcomment'));" title="Название">getcomment</li>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	<!--служебные скрипты -->
+	<script language='JavaScript' type='text/javascript'>
+		function ChangePlayer(str){
+			if(str=='video'){
+				var flashvars = {"uid":"myplayer","m":"video","pl":"http://video.uppod.net/sample.txt"};var params = {id:"myplayer",allowFullScreen:"true",allowScriptAccess:"always"}; new swfobject.embedSWF("uppod.swf", "myplayer", "400", "300", "9.0.115", false, flashvars, params);
+			}
+			if(str=='audio'){
+				var flashvars = {"uid":"myplayer","m":"audio","pl":"http://audio.uppod.net/sample.txt"};var params = {id:"myplayer",allowScriptAccess:"always"}; new swfobject.embedSWF("uppod.swf", "myplayer", "400", "60", "9.0.115", false, flashvars, params);
+			}
+			if(str=='photo'){
+				var flashvars = {"uid":"myplayer","m":"photo","pl":"http://img.uppod.net/sample.txt"};var params = {id:"myplayer",allowFullScreen:"true",allowScriptAccess:"always"}; new swfobject.embedSWF("uppod.swf", "myplayer", "400", "300", "9.0.115", false, flashvars, params);
+			}
+		}
+</script>
+	</body>
+</html>

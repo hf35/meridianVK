@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Meridian Web плеер</title>
+    <link rel="stylesheet" type="text/css" href="css/meridianVK.css" />
+    <link rel="stylesheet" type="text/css" href="css/meridianWeb.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <base href="http://hart-flamov.ru/" />
+</head>
+<body>
+    <div id="header" style="position: relative;">
+        <div id="subHeader">
+            <div id="menu">
+            <span class="aspan" id="main">главная</span>
+                <span class="aspan" id="myTracks">моя музыка</span> <span class="aspan" id="frendsTracks">
+                    друзья</span> <span class="aspan" id="groups">группы</span> <span class="aspan" id="recom2"
+                        title="Случайные аудиотреки на основе ваших вкусов">рекомендации</span>
+                <span class="aspan" id="radio">радио</span>
+            </div>
+            <div id="listSearch">
+                <div id="value">
+                    группа</div>
+                <div id="listBox">
+                    <div id="search1">группа</div>
+                    <div id="search2">тэг</div>
+                    <div id="search3">vk.com</div>
+                </div>
+            </div>
+            <input type="text" id="find" value="Искать группу" autocomplete="off" class="aspan" />
+            <span class="aspan" id="finding" title="Искать…">
+                <img alt="" src="img/search_icon.png" /></span>
+            <!--<form class="aspan" action="#" onsubmit="return false" id="form" autocomplete="off">
+        <button type="submit" id="findButton" style="width: 25px; width: 45px; padding-top: 2px">
+            <img src="img/Find.png" width="16" height="16" alt="" />
+        </button>
+        </form>-->
+        </div>
+        <img id="preload" src="img/anim2.gif" alt="42" width="807" height="5" />
+    </div>
+    <h2 id="title">
+        Загрузка.
+    </h2>
+    <div id="libriary">
+        <div id="list">
+        </div>
+        <div id="playlist">
+        </div>
+        <div id="info">
+            <div id="similar">
+            </div>
+            <div id="tags">
+            </div>
+            <div id="albums">
+            </div>
+        </div>
+    </div>
+    <div id="audio">
+        <div id="leftBar">
+            <div id="coverDiv">
+                <img id="cover" width="50" height="50" src="img/cover_default.png" alt="cover" />
+            </div>
+            <div id="dataTrack">
+                <div id="additButtons">
+                    <img id="newPlaylist" src="img/playlist_new_icon2.png" width="20" height="21" alt=""
+                        title="Создать новый плэйлист" />
+                    <img id="textTrack" src="img/show_lyrics_icon2.png" width="18" height="20" alt=""
+                        title="Посмотреть текст песни" />
+                    <img id="addTrackWall" src="img/share_icon2.png" width="18" height="21" alt="" title="Отправить трек на стену другу" />
+                    <img src="img/fav_icon.png" alt="" id="addTrack" width="20" height="17" />
+                </div>
+                <div id="titleTrack">
+                </div>
+                <div id="prog">
+                    <div id="progLive">
+                    </div>
+                    <div id="progLoad">
+                    </div>
+                </div>
+                <div id="currentTime">
+                    00:00
+                </div>
+                <div id="quote">
+                    Исполнитель дня <span id="leader" title="Нажми чтобы послушать">…</span> <span id="author">
+                    </span>
+                </div>
+                <div id="totalTime">
+                    00:00
+                </div>
+            </div>
+        </div>
+        <div id="buttons">
+            <div id="topDivB">
+                <img src="img/notshuffle_icon.png" width="16" height="16" id="random" title="случайное воспроизведение"
+                    alt="" />
+                <img src="img/prev.png" width="30" height="32" id="prevButton" title="Предыдущий трек"
+                    alt="" />
+                <img src="img/play.png" width="42" height="42" id="playButton" title="Пауза/воспроизведение"
+                    alt="" />
+                <img src="img/next.png" width="30" height="32" id="nextButton" title="Следующий трек"
+                    alt="" />
+                <img src="img/notrepeat_icon.png" width="16" height="16" id="repeat" title="повторное воспроизведение трека"
+                    alt="" />
+            </div>
+            <div id="bottomDivB">
+                <div id="noSoundDiv">
+                    <img id="volumeButton" width="16" height="16" src="img/volume_icon.png" alt="" />
+                </div>
+                <div id="volume" title="Громкость">
+                    <div id="slider">
+                    </div>
+                </div>
+                <div id="levelVolume">
+                </div>
+            </div>
+        </div>
+        <div id="wrapPlayer">
+            <div id="player">
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; left: 0px; top: 0px; text-align: right;" id="logo"
+        title="Настройки">
+        <img src="img/logo.png" alt="Meridian" id="meridian" />
+    </div>
+    <div id="addBio">
+    </div>
+    <div id="settingsScreen">
+        <h2>
+            настройки</h2>
+        <div id="settings">
+            <div id="listSettings">
+            </div>
+            <div id="mainSettings">
+                <h4>
+                    Интерфейс</h4>
+                <div id="settingsShowBio">
+                    <input type="checkbox" id="showBio" checked="checked" />
+                    Показывать информацию об исполнителе, если возможно</div>
+                <br />
+                <div id="settingsAnimation">
+                    <input type="checkbox" id="showAnimation" checked="checked" />
+                    Включить анимацию
+                </div>
+                <br />
+                <div id="settingsAutoplay">
+                    <input type="checkbox" id="autoplay" checked="checked" />
+                    Начинать воспроизводить плэйлист сразу после загрузки
+                </div>
+                <br />
+                <div id="settingsScrolls">
+                    <input type="checkbox" id="customScroll" />
+                    Использовать системный скроллинг (рекомендуется для тач - устройств - смартфонов, планшетов). Требуется перезапуск плеера.
+                </div>
+            </div>
+            <div id="lastfmSettings">
+                <h4>
+                    Авторизация Last.fm</h4>
+                Введите логин и пароль (предпочтительнее)<br />
+                <input type="text" id="username" value="" />
+                Имя
+                <br />
+                <input type="password" id="password" value="" />
+                Пароль<br />
+                Или перейдите по ссылке и разрешите приложению доступ <a id="Oauth" href="http://www.last.fm/api/auth/?api_key=809dffc5f629c1d4871323f01379bc0d"
+                    target="_blank">Авторизоваться</a>
+                <br />
+                <a class="reg" href="http://www.lastfm.ru/join">Регистрация на last.fm</a>
+                <h4>
+                    Скробблинг</h4>
+                <input id="likeLove" checked="checked" type="checkbox" />
+                Помечать треки как “любимые” на Last.fm при добавлении к себе в аудиозаписи
+                <br />
+                <br />
+                Скробблить трек через <span id="scrobTime"></span>c.
+                <br />
+                <div id="scrobTimeSlider">
+                </div>
+            </div>
+            <div id="aboutApp">
+                <h4>
+                    О Meridian web</h4>
+                Copyright © Hart Flamov 2011<br />
+                <a target="_blank" href="http://meridianvk.com">meridianvk.com</a>
+                <div>
+                    Используется информация с сервисов Last.fm, echonest.com и musicbrainz.
+                </div>
+            </div>
+            <div id="saveSettingsDiv">
+                <button id="saveSettings">
+                    СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                <button id="cancelSettings">
+                    ОТМЕНА</button>
+            </div>
+        </div>
+    </div>
+    <div id="LastFM">
+        <span id="scrob" class="aspan" style="font-size: 13px;"></span>
+    </div>
+    <div id="frends">
+    </div>
+    <div id="startup">
+    </div>
+    <div id="shadow">
+    </div>
+    <div id="frendsList">
+    </div>
+    <div id="radioList">
+    </div>
+    <div id="textBack">
+    </div>
+    <div id="playlists">
+    </div>
+    <div id="genres">
+    </div>
+    <div id="newPlaylistDialog">
+    </div>
+    <div id="editTrack">
+    </div>
+    <div id="frame" style="display:none"></div>
+
+    <script type="text/javascript" src="scripts/vars.js"></script>
+    <script type="text/javascript" src="scripts/VK.js"></script>
+    <script type="text/javascript" src="scripts/termsEchonest.js"></script>
+    <script type="text/javascript" src="uppod/swfobject.js"></script>
+    <script type="text/javascript" src="scripts/detectHTML5.js"></script>
+
+    <script type="text/javascript" src="scripts/md5.js"></script>
+    <script type="text/javascript" src="scripts/cross_domen_ajax.js"></script>
+    <script type="text/javascript" src="scripts/right.js"></script>
+    <script type="text/javascript" src="scripts/right-slider.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">                                                                  (function (w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter10268755 = new Ya.Metrika({ id: 10268755, trackLinks: true, accurateTrackBounce: true, trackHash: true }); } catch (e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10268755" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html>

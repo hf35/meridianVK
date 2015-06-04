@@ -1,0 +1,1297 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+html
+{
+    background-color: White;
+    padding: 0px 4px 0px 4px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+}
+
+    html body
+    {
+        height: 100%;
+    }
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: normal !important;
+}
+
+#header
+{
+    padding-left: 30px;
+    position: relative;
+}
+
+#form
+{
+    display: inline-block;
+    padding-top: 0px !important;
+    padding-bottom: 2px !important;
+}
+
+    #form:hover
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+#logo a
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+    #logo a img
+    {
+        border: none;
+        cursor: pointer;
+    }
+
+#logo div
+{
+    position: relative;
+    top: -4px;
+}
+
+#preload
+{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+
+.divs
+{
+    float: left;
+    margin: 10px;
+    padding: 5px 15px 15px 6px;
+    text-align: center;
+}
+
+#find
+{
+    color: silver;
+    width: 150px;
+}
+
+    #find:focus
+    {
+        color: black;
+    }
+
+#findButton
+{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#title
+{
+    text-align: center;
+    font: 15px;
+    font-weight: normal;
+    font-family: Verdana;
+    position: relative;
+    top: 5px;
+    padding-bottom: 10px;
+}
+
+    #title a
+    {
+        font-size: 12px;
+    }
+
+#info
+{
+    border: 1px solid silver;
+    padding: 5px;
+    font-size: 100%;
+    height: 120px;
+    overflow: auto;
+    text-indent: 35px;
+    font-size: 15px;
+}
+
+    #info a
+    {
+        color: black;
+    }
+
+    #info img
+    {
+        display: inline-block;
+        float: left;
+        margin: 10px;
+    }
+
+#tags
+{
+    border: 1px solid silver;
+    border-top: none;
+    font-size: 100%;
+    height: 20px;
+    overflow: hidden;
+    display: none;
+    text-align: center;
+    color: #696969;
+}
+
+    #tags span
+    {
+        margin: 15px;
+        cursor: pointer;
+        color: Black;
+    }
+
+        #tags span:hover
+        {
+            color: #00A3EF;
+        }
+
+#similar
+{
+    margin-top: 5px;
+    border: 1px solid silver;
+    border-bottom: none;
+    font-size: 100%;
+    overflow: hidden;
+    display: none;
+    height: 20px;
+    text-align: center;
+    color: #696969;
+}
+
+    #similar span
+    {
+        margin: 5px;
+        cursor: pointer;
+        color: Black;
+    }
+
+        #similar span:hover
+        {
+            color: #00A3EF;
+        }
+
+#playlistAndAlbums
+{
+    /*border-radius: 5px;             border: 1px solid silver;             padding: 5px;             font-size: 115%;*/
+    overflow: auto;
+    height: 435px;
+    margin-top: 5px;
+}
+
+.best
+{
+    text-align: center;
+}
+
+    .best div
+    {
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .best h3
+    {
+        font-weight: normal;
+    }
+
+#albums
+{
+    display: none;
+    float: right;
+    width: 229px;
+    height: 418px;
+    overflow: auto;
+    border: 1px solid silver;
+    padding: 5px;
+    text-align: center;
+}
+
+    #albums h2
+    {
+        margin-bottom: 4px;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    #albums .album
+    {
+        border: 1px solid white;
+
+        text-decoration: none;
+    }
+
+        #albums .album:hover
+        {
+            background-color: #FFFEE8;
+            border: 1px solid silver;
+
+            cursor: pointer;
+        }
+
+    #albums h4
+    {
+        text-align: center;
+        font-weight: normal;
+        font-size: 17px;
+        border-bottom: 1px silver solid;
+        text-decoration: none;
+    }
+
+    #albums img
+    {
+        text-align: center;
+        margin-bottom: 9px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2px;
+    }
+
+#playlist
+{
+    display: none;
+    float: left;
+    width: 533px;
+    height: 418px;
+    padding-right: 50px;
+    overflow: auto;
+    border: 1px solid silver;
+    padding: 5px;
+    position: relative;
+}
+
+    #playlist h3
+    {
+        text-align: center;
+        font-weight: normal;
+    }
+
+#continue
+{
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+    #continue:hover
+    {
+        cursor: pointer;
+    }
+
+.delete .duration
+{
+    color: silver;
+}
+
+.config
+{
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 50px;
+    z-index: 3;
+    background-color: White;
+
+    background-color: white;
+    border: 1px silver solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+    .config .titlePlaylist
+    {
+        color: silver;
+        font-size: 12px;
+        margin-right: 5px;
+        margin-top: -4px;
+    }
+
+    .config img
+    {
+        position: relative;
+        top: 2px;
+        margin-right: 5px;
+    }
+
+.titleAlbum
+{
+    text-align: center;
+    font-weight: normal;
+}
+
+#playlist div
+{
+    color: #CCC;
+    /*font-size: 20px;*/
+    position: relative;
+    /*border-bottom: 1px #E8ECFF solid;*/
+    padding: 4px;
+    padding-right: 60px;
+}
+
+    #playlist div.finded
+    {
+        color: black;
+        cursor: pointer;
+    }
+
+    #playlist div .duration
+    {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+    }
+
+    #playlist div.finded:hover
+    {
+        background-color: #FFFEE8;
+    }
+
+#audio
+{
+
+    border: 1px solid silver;
+    margin-top: 5px;
+    padding: 5px;
+    height: 50px;
+    position: relative;
+}
+
+.buttons
+{
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+#playButton
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    left: 33px;
+    background-image: url(../img/pause.png);
+}
+
+    #playButton:hover
+    {
+        background-image: url(../img/pause.png);
+        cursor: pointer;
+    }
+
+#prevButton
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(../img/prev.png);
+}
+
+    #prevButton:hover
+    {
+        background-image: url(../img/prev2.png);
+        cursor: pointer;
+    }
+
+#stopButton
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    left: 65px;
+    background-image: url(../img/stop.png);
+}
+
+    #stopButton:hover
+    {
+        background-image: url(../img/stop2.png);
+        cursor: pointer;
+    }
+
+#nextButton
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+    left: 97px;
+    background-image: url(../img/next.png);
+}
+
+    #nextButton:hover
+    {
+        background-image: url(../img/next2.png);
+        cursor: pointer;
+    }
+
+#titleTrack
+{
+    position: absolute;
+    font-size: 17px;
+    top: 5px;
+    left: 130px;
+    width: 475px;
+    overflow: hidden;
+    text-align: center;
+    height: 25px;
+}
+
+#data
+{
+    position: absolute;
+    top: 28px;
+    left: 5px;
+    color: Silver;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 6px;
+    float: left;
+}
+
+#prog
+{
+    height: 8px;
+    width: 650px;
+    border: 1px silver solid;
+    position: relative;
+    position: absolute;
+    top: 40px;
+    left: 105px;
+}
+
+#progLive
+{
+    height: 8px;
+    width: 0px;
+    background-color: #00A3EF;
+    position: absolute;
+    z-index: 8;
+    cursor: pointer;
+}
+
+#progLoad
+{
+    position: absolute;
+    z-index: 2;
+    height: 8px;
+    width: 0px;
+    background-color: #E8E8E8;
+
+    cursor: pointer;
+}
+
+#volume
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 50px;
+    /* border: 1px silver solid;*/
+    cursor: pointer;
+
+}
+
+.handle
+{
+    background-color: #00A3EF !important;
+}
+
+#valueVolume
+{
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    background-color: #00A3EF;
+}
+
+#additButtons
+{
+    position: absolute;
+    right: 30px;
+    height: 20px;
+    top: 10px;
+    width: 160px;
+}
+
+#newPlaylist
+{
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/newPlaylist.png);
+}
+
+    #newPlaylist:hover
+    {
+        background-image: url(../img/newPlaylistAkt.png);
+        cursor: pointer;
+    }
+
+
+#textTrack
+{
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/text.png);
+}
+
+    #textTrack:hover
+    {
+        background-image: url(../img/text2.png);
+        cursor: pointer;
+    }
+
+#addTrack
+{
+    position: absolute;
+    left: 56px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/plus.png);
+}
+
+    #addTrack:hover
+    {
+        background-image: url(../img/plus2.png);
+        cursor: pointer;
+    }
+
+#addTrackWall
+{
+    position: absolute;
+    left: 83px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/plusFrend.png);
+}
+
+    #addTrackWall:hover
+    {
+        background-image: url(../img/plusFrend2.png);
+        cursor: pointer;
+    }
+
+#random
+{
+    position: absolute;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/randomPass.png);
+}
+
+    #random:hover
+    {
+        background-image: url(../img/randomAk.png);
+        cursor: pointer;
+    }
+
+#repeat
+{
+    position: absolute;
+    left: 135px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/repeat.png);
+}
+
+    #repeat:hover
+    {
+        background-image: url(../img/repeat2.png);
+        cursor: pointer;
+    }
+
+.aspan
+{
+    font-weight: normal;
+    z-index: 25;
+    padding: 8px 10px 7px 10px;
+    display: inline-block;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 13px;    
+}
+
+    .aspan:hover
+    {
+        cursor: pointer;
+        color: #00A3EF;
+    }
+
+.aspanAk
+{
+    padding: 8px 10px 7px 10px;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 13px;
+    z-index: 25;
+    background-color: #00A3EF;
+    color: White;
+}
+
+    .aspanAk:hover
+    {
+        text-decoration: underline;
+        cursor: pointer;
+        color: White;
+    }
+
+#shadow
+{
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    height: 300px;
+    width: 770px;
+    background-color: white;
+    opacity: 0.94;
+    display: none;
+    z-index: 10;
+    padding-top: 50px;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+#username, #password
+{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 35px;
+    font-size: 27px;
+}
+
+#saveButton
+{
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#cancelButton
+{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.formLastFM fieldset
+{
+    margin: auto;
+    width: 500px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+    .formLastFM fieldset legend
+    {
+        padding: 0px 9px 0px 9px;
+    }
+
+#newPlaylistDialog
+{
+    position: absolute;
+    width: 400px;
+    left: 200px;
+    background-color: White;
+    top: 150px;
+    overflow: auto;
+    padding: 15px;
+    display: none;
+    z-index: 50;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+#newPlaylistDialog
+{
+    margin-bottom: 8px;
+}
+
+    #newPlaylistDialog div
+    {
+        margin-bottom: 10px;
+    }
+
+#frendsList
+{
+    position: absolute;
+    width: 780px;
+    min-height: 240px;
+    max-height: 400px;
+    background-color: White;
+    top: 150px;
+    overflow: auto;
+    padding: 5px;
+    padding-top: 15px;
+    display: none;
+    z-index: 50;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+#radioList
+{
+    position: absolute;
+    width: 780px;
+    min-height: 240px;
+    max-height: 440px;
+    background-color: White;
+    top: 150px;
+    overflow: auto;
+    padding: 5px;
+    padding-top: 15px;
+    display: none;
+    z-index: 40;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+#closeRadioList
+{
+    position: absolute;
+    top: 5px;
+    text-align: left;
+    height: 20px;
+    color: Black;
+    right: 5px;
+    background-color: White;
+}
+
+#radioList h3
+{
+    text-align: center;
+}
+
+#radioList div h5
+{
+    font-weight: normal;
+    font-size: 15px;
+    margin: -10px;
+}
+
+#radioList div
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 170px;
+    margin: 7px;
+    margin-right: 0px;
+    padding: 5px;
+    padding-top: 10px;
+    border: 1px silver solid;
+    text-align: center;
+}
+
+    #radioList div:hover
+    {
+        background-color: #FFFEE8;
+        cursor: pointer;
+    }
+
+#textBack
+{
+    position: absolute;
+    width: 500px;
+    left: 150px;
+    min-height: 400px;
+    max-height: 600px;
+    background-color: White;
+    top: 50px;
+    overflow: auto;
+    padding: 15px;
+    padding-top: 40px;
+    display: none;
+    z-index: 50;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+#closeTextBack
+{
+    position: absolute;
+    top: 55px;
+    right: 155px;
+    text-align: left;
+    height: 20px;
+    color: Black;
+    z-index: 100;
+}
+
+#frendsList h3
+{
+    text-align: center;
+}
+
+#frendsList div h5
+{
+    font-weight: normal;
+    font-size: 15px;
+    margin: -10px;
+}
+
+#frendsList div
+{
+    position: relative;
+    float: left;
+    width: 122px;
+    margin: 7px;
+    padding: 5px;
+    padding-top: 10px;
+    border: 1px silver solid;
+    text-align: center;
+}
+
+    #frendsList div:hover
+    {
+        background-color: #FFFEE8;
+        cursor: pointer;
+    }
+
+#closeFrendsList
+{
+    position: absolute;
+    top: 5px;
+    text-align: left;
+    height: 20px;
+    color: Black;
+    right: 5px;
+    background-color: White;
+}
+
+#messageForWall
+{
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+
+.reg
+{
+    font-size: 12px;
+}
+
+#startup
+{
+    position: absolute;
+    width: 800px;
+    left: 0px;
+    height: 740px;
+    top: 55px;
+    overflow: auto;
+    padding: 15px;
+    display: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.strGroup
+{
+    overflow: hidden;
+}
+
+    .strGroup h4
+    {
+        font-weight: normal;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .strGroup div h4
+    {
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    .strGroup div
+    {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 130px;
+        margin: 7px;
+        margin-left: 8px;
+        margin-right: 0px;
+        padding: 5px;
+        padding-top: 10px;
+        border: 1px silver solid;
+        text-align: center;
+        height: 130px;
+        overflow: hidden;
+    }
+
+        .strGroup div:hover
+        {
+            background-color: #FFFEE8;
+            cursor: pointer;
+        }
+
+#start
+{
+    opacity: 0.05;
+    text-decoration: none;
+}
+
+#quote
+{
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+    width: 780px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 13px;
+}
+
+#author
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0xp;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#debug
+{
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+}
+
+#eq
+{
+    margin-left: 10px;
+}
+
+#LastFM
+{
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+.radGroup
+{
+    overflow: auto;
+    height: 175px;
+    position: relative;
+}
+
+    .radGroup h4
+    {
+        font-weight: normal;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .radGroup div h4
+    {
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    .radGroup div
+    {
+        position: relative;
+        float: left;
+        width: 170px;
+        margin: 7px;
+        margin-left: 8px;
+        margin-right: 0px;
+        padding: 5px;
+        padding-top: 10px;
+        border: 1px silver solid;
+         text-align: center;
+    }
+
+        .radGroup div:hover
+        {
+            background-color: #FFFEE8;
+            cursor: pointer;
+        }
+
+    .radGroup #fullList
+    {
+        position: absolute;
+        bottom: 0px;
+        right: 40px;
+    }
+
+.popup
+{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    width: 400px;
+    min-height: 60px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: White;
+    padding: 20px;
+    font-size: 17px;
+    box-shadow: 5px 5px 45px rgba(0,0,0,0.9); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 45px rgba(0,0,0,0.9); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 45px rgba(0,0,0,0.9); /* Для Safari и Chrome */
+    z-index: 1000;
+}
+
+    .popup span
+    {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        text-decoration: none;
+    }
+
+        .popup span:hover
+        {
+            color: red;
+            text-decoration: none;
+        }
+
+#tooltip
+{
+    position: absolute;
+    background-color: White;
+    color: black;
+    border: 1px black solid;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* Параметры тени */
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* Для Firefox */
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* Для Safari и Chrome */
+    z-index: 1000;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+}
+
+    #tooltip div
+    {
+        padding: 6px;
+    }
+
+        #tooltip div:hover
+        {
+            background-color: #00A3EF;
+            color: White !important;
+            cursor: pointer;
+        }
+
+        #tooltip div.active
+        {
+            background-color: #00A3EF;
+            color: White;
+        }
+
+
+        #tooltip div span
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+
+.colorText
+{
+    color: #00d632;
+}
+
+#playlists
+{
+    position: absolute;
+    width: 300px;
+    left: 250px;
+    max-height: 600px;
+    background-color: White;
+    top: 50px;
+    overflow: auto;
+    padding: 15px;
+    /*padding-top: 40px;*/
+    display: none;
+    z-index: 50;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+    #playlists h2
+    {
+        font-size: 19px;
+    }
+
+    #playlists div
+    {
+        position: relative;
+        margin-top: 5px;
+        border: 1px silver solid;
+        font-size: 17px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+        #playlists div:hover
+        {
+            background-color: #FFFEE8;
+            cursor: pointer;
+        }
+
+#closePlaylists
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: White;
+}
+
+#closeDialogNewPlaylist
+{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: White;
+}
+
+#createNewPlaylist
+{
+    padding: 4px;
+}
+
+#leader
+{
+    font-size: 16px;
+}
+
+    #leader:hover
+    {
+        cursor: pointer;
+        color: #00A3EF;
+    }
+
+.spanRestore
+{
+    color: black;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-left: 20px;
+    position: absolute;
+    right: 60px;
+}
+
+    .spanRestore:hover
+    {
+        color: #00A3EF;
+        cursor: pointer;
+    }
+
+#editTrack
+{
+    position: absolute;
+    width: 400px;
+    left: 200px;
+    background-color: White;
+    top: 50px;
+    overflow: auto;
+    padding: 15px;
+    /*padding-top: 40px;*/
+    display: none;
+    z-index: 50;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Параметры тени */
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Firefox */
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+}
+
+    #editTrack h2
+    {
+        margin-bottom: 10px;
+    }
+
+#closeEditTrack
+{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: White;
+}
+
+#editButton
+{
+    margin-top: 10px;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.noA
+{
+    color: silver !important;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+#firstSugg
+{
+    border-top: 1px black solid;
+}
+
+#toWall
+{
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+
+.sep
+{
+    width: 50%;
+    margin: auto;
+    margin-top: 6px;
+}
+
+.comment
+{
+    font-size: 12px;
+    font-weight: normal;
+}
